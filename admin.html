@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Panel de Administración - Usuarios</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; background: #121212; color: #fff; }
+        header { background: #1f1f1f; padding: 20px; display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid #d4af37; }
+        nav a { color: #d4af37; margin: 0 10px; text-decoration: none; }
+        main { padding: 30px; max-width: 1000px; margin: auto; }
+        .section-box { background: #1f1f1f; padding: 20px; margin-bottom: 20px; border-radius: 8px; border: 1px solid #333; }
+        table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+        th, td { border: 1px solid #444; padding: 10px; text-align: left; }
+        th { background: #2c2c2c; }
+        button { background: #d4af37; color: #000; padding: 8px 12px; border: none; font-weight: bold; cursor: pointer; border-radius: 4px; }
+        .danger { background: #ff5555; color: #fff; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h2>Panel de Control - Usuarios Autorizados</h2>
+    <nav>
+        <a href="index.html">Ver Web Clientes</a>
+        <a href="login.html" style="color: #ff5555;">Cerrar Sesión</a>
+    </nav>
+</header>
+
+<main>
+    <div class="section-box">
+        <h3>Gestión de Redes Sociales (Protegidas por Clave)</h3>
+        <p>Configura los enlaces oficiales de las redes de la barbería:</p>
+        <input type="text" id="linkInstagram" placeholder="Enlace de Instagram" style="width: 70%; padding: 8px; margin-bottom: 10px;">
+        <br>
+        <input type="text" id="linkWhatsApp" placeholder="Enlace de WhatsApp" style="width: 70%; padding: 8px; margin-bottom: 10px;">
+        <br>
+        <button onclick="guardarRedes()">Actualizar Redes</button>
+    </div>
+
+    <div class="section-box">
+        <h3>Control y Cancelación de Citas / Puestos</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Cliente</th>
+                    <th>Teléfono / Correo</th>
+                    <th>Fecha y Hora</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="tablaCitas">
+                <tr>
+                    <td>Juan Pérez</td>
+                    <td>555-1234 / juan@email.com</td>
+                    <td>18/10/2026 - 03:00 PM</td>
+                    <td><button class="danger" onclick="alert('Cita cancelada con éxito')">Cancelar Cita</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="section-box">
+        <h3>Historial de Entradas al Local y Base de Datos de Clientes</h3>
+        <p>Registro automático de personas que han visitado la barbería o apartado citas.</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nombre Completo</th>
+                    <th>Correo</th>
+                    <th>Última Visita / Entrada</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Carlos Gómez</td>
+                    <td>carlos@email.com</td>
+                    <td>17/10/2026 - 04:30 PM</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="section-box">
+        <h3>Editor General de Contenidos</h3>
+        <p>Redacta, corrige o cambia cualquier sección, texto o imagen del sitio web de clientes de manera instantánea.</p>
+        <textarea style="width: 100%; height: 100px; background: #2c2c2c; color: #fff; padding: 10px;">Bienvenidos a nuestra Barbería...</textarea>
+        <br><br>
+        <button onclick="alert('Cambios guardados y aplicados en la página de clientes')">Guardar Cambios en la Web</button>
+    </div>
+</main>
+
+<script>
+    function guardarRedes() {
+        alert("Enlaces de redes sociales actualizados de forma segura.");
+    }
+</script>
+
+</body>
+</html>
